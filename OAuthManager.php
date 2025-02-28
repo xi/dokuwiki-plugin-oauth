@@ -106,7 +106,7 @@ class OAuthManager
         $userdata = $session->getUser();
         if (!$userdata) return false;
         if (!isset($userdata['user'])) return false; // default dokuwiki does not put username here, let DW handle it
-        $session->setUser($userdata, false); // does a login without resetting the time
+        $session->setUser($userdata, true); // does a login and resets the time
         return true;
     }
 
