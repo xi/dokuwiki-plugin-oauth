@@ -304,7 +304,7 @@ abstract class AbstractService extends BaseAbstractService implements ServiceInt
      */
     public function getCodeChallengeMethod()
     {
-        return null;
+        return 'S256';
     }
 
     /**
