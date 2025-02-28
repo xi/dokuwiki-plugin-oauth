@@ -243,13 +243,6 @@ abstract class Adapter extends ActionPlugin
             );
         }
 
-        if (
-            $accessToken->getEndOfLife() !== $accessToken::EOL_NEVER_EXPIRES &&
-            !$accessToken->getRefreshToken()
-        ) {
-            msg('Service did not provide a Refresh Token. You will be logged out when the session expires.');
-        }
-
         return true;
     }
 

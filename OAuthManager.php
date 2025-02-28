@@ -37,7 +37,7 @@ class OAuthManager
      */
     public function continueFlow()
     {
-        return $this->loginByService() || $this->loginBySession() || $this->loginByCookie();
+        return $this->loginByService() || $this->loginBySession();
     }
 
     /**
